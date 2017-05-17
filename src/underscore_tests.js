@@ -15,8 +15,23 @@ var _ = { };
 
   // Return an array of the first n elements of an array. If n is undefined,
   // return just the first element.
-  _.first = function(array, n) {
-  };
+
+
+  _.first = function(arr, n) {
+      if (!n) {
+          return arr[0]
+      };
+      if (n > arr.length){
+          return arr;
+      };
+
+      var newArr = [];
+      for(var i = 0; i < n; i++) {
+      newArr.push(arr[i])
+  }
+  return newArr;
+
+  }
 
   // Like first, but for the last elements. If n is undefined, return just the
   // last element.
